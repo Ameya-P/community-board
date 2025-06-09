@@ -1,68 +1,188 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+}
+
+.Header {
+  padding: 30px;
+  padding-bottom: 50px;
+}
+
+html {
+  background: #FFFFFC;
+  font-family: 'Lato';
+  margin-bottom: 40px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: 'Pacifico';
+  font-size: 500%;
+  text-align: center;
+}
+
+h3.tagline {
+  color: rgb(138, 132, 132);
+  font-weight: lighter;
+  font-style: italic;
+  text-align: center;
+}
+
+span.red {
+  color: var(--red);
+
+}
+
+span.yellow {
+  color: var(--yellow);
+}
+
+span.green {
+  color: var(--green);
+}
+
+span.blue {
+  color: var(--blue);
+}
+
+div.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+div.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+div.info {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+h3 {
+  font-size: x-large;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-family: 'Lato';
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #FFFFFC;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
+button:hover {
+  font-family: 'Lato';
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #FFFFFC;
+}
+
+div.red {
+  background-color: var(--red-light);
+  color: var(--red-dark);
+  
   button {
-    background-color: #f9f9f9;
+    background-color: var(--red);
   }
+
+  button:hover {
+    background-color: var(--red-dark);
+  }
+}
+
+div.yellow {
+  background-color: var(--yellow-light);
+  color: var(--yellow-dark);
+
+  button {
+    background-color: var(--yellow);
+  }
+
+  button:hover {
+    background-color: var(--yellow-dark);
+  }
+}
+
+div.green {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+
+  button {
+    background-color: var(--green);
+  }
+
+  button:hover {
+    background-color: var(--green-dark);
+  }
+}
+
+div.blue {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+
+  button {
+    background-color: var(--blue);
+  }
+
+  button:hover {
+    background-color: var(--blue-dark);
+  }
+}
+
+img {
+  width: 300px;
+  height: auto;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+:root {
+  --red: #EC5E62;
+  --red-light: #F4B6C3;
+  --red-dark: #530E36;
+
+  --yellow: #EEBE55;
+  --yellow-light:#FCF0DD;
+  --yellow-dark: #974320;
+
+  --green: #96AA9F;
+  --green-light: #D7FFE9;
+  --green-dark: #1C423E;
+
+  --blue: #9DA7EA;
+  --blue-light: #DEDDFC;
+  --blue-dark: #383154;
 }
